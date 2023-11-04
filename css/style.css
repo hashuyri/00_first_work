@@ -1,0 +1,703 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+/* 全体関連 */
+/* 画像の幅調整 */
+img {
+	width: 100%;
+}
+
+/* 「ABOUT」「NEWS」 */
+.yellow_text {
+	margin-top: 64px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	color: #ffd61a;
+	font-size: 24px;
+	background-color: #cfbcbc;
+}
+
+/* .border {
+	margin: 30px;
+	border:  #811414;
+} */
+
+#padding_top_32 {
+	padding-top: 32px;
+}
+
+#padding_bottom_80 {
+	padding-bottom: 80px;
+}
+
+/* 「padding-bottom 40px」のクラス */
+.padding-bottom_40 {
+	padding-bottom: 40px;
+}
+
+/* ヘッダー全体 */
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 0px 20px;
+	border:1px #ffd61a solid;
+	line-height: 80px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	background-color: #ffd61a;
+}	
+
+/* ヘッダーのロゴの箱 */
+.header div {
+	width: 30%;
+	padding-left: 3%;
+}	
+
+/* ヘッダーのロゴ */
+.header img {
+	width: 250px;
+}	
+
+/* ヘッダーのテキストの箱 */
+.header nav{
+	width: 70%;
+	padding-left: 15%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}	
+
+/* ヘッダーリンク */
+.header a:link {/* リンクをクリックする前 */
+	color: #811414;
+	font-weight: bold;
+}	
+
+.header a:visited {/* リンクをクリックした後 */
+	color: #811414;
+}	
+
+.header a:hover {/* マウスカーソル合わせた時 */
+	text-decoration: underline;
+	color: #811414;
+}	
+
+/* トップ画像 */
+.top_image {
+	padding-top: 80px;
+}
+
+#top_image {
+	background-image: url(../img/main_image.png);
+	background-size: 100%;/* 背景画像のサイズ調整 */
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #811414;
+	text-shadow: 2px 2px 3px #ffd61a;
+	line-height:1;
+}
+
+#top_image h1{
+	margin: 0px 0px 20px;
+	font-size: 48px;
+}
+
+#top_image h2 {
+	margin: 20px 0px 0px;
+	font-size: 36px;
+	font-weight: 80;
+}
+
+/* aboutセクション */
+.about {
+	padding-bottom: 80px;
+	margin-top: -16px;
+	padding-top: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 「チーズアカデミーについて」 */
+#about_h3 {
+	padding: 24px 0px;
+}
+
+/* 「チーズアカデミーは、・・・」 */
+#about_p {
+	padding: 40px 0px;
+}
+
+/* ループ画像を作る */
+.loop_img {
+	display: flex;
+	overflow: hidden;
+}
+
+@keyframes loop {
+	0% {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes loop2 {
+	0% {
+		transform: translateX(0);
+	}
+	
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+.loop_img img:first-child {
+	animation: loop 40s -20s linear infinite;
+}
+
+.loop_img img:last-child {
+	animation: loop2 40s linear infinite;
+}
+/* 「COURSE」を上下に4分割した内の一番上 */
+#course {
+	margin-top: -16px;
+	padding-top: 16px;
+}
+
+.course_top_box {
+	padding: 64px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 「COURSE」 */
+#course_top_text {
+	margin-bottom: 24px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 24px;
+	color: #811414;
+	background-color: #cfbcbc;
+}
+
+/* 「COURSE」TOP以外の箱 */
+.course_box {
+	padding: 0px 15%;
+	display: flex;
+}
+
+/* 幅50％の集合 */
+#course_first_img {
+	width: 50%;
+}
+
+.course_first_img {
+	width: 100%;
+	height: 400px;
+	background-image: url(../img/course_01.jpg);
+	background-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: transparent;
+}
+
+#course_second_img {
+	width: 50%;
+}
+
+.course_second_img {
+	width: 100%;
+	height: 400px;
+	background-image: url(../img/course_02.jpg);
+	background-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: transparent;
+	cursor: pointer;
+}
+
+/* 写真マウスオーバー時 */
+.course_second_img:hover {
+	background-image: url(../img/group_photo.jpg);
+}
+
+#course_third_img {
+	width: 50%;
+}
+
+.course_third_img {
+	width: 100%;
+	height: 400px;
+	background-image: url(../img/course_03.jpg);
+	background-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: transparent;
+}
+
+/* 「COURSE」の左寄せtextの箱 */
+.left_text_box {
+	padding-left: 48px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgb(250, 247, 247);
+}
+
+/* 「COURSE」の右寄せtextの箱 */
+.right_text_box {
+	padding-right: 48px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	background-color: rgb(250, 247, 247);
+}
+
+/* 「NEWS」全体 */
+.news {
+	margin-bottom: 80px;
+	margin-top: -16px;
+	padding-top: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 「NEWS」を上下に2分割した内の上 */
+.news_top_box {
+	margin-bottom: 64px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 「NEWS」を上下に2分割した内の下 */
+.news_bottom_box {
+	display: flex;
+	flex-shrink: 1;/*各要素の幅を最大限伸ばす */
+}
+
+/* 「NEWS」を上下に2分割した内の下の箱の3要素 */
+.news_triple_box {
+	margin: 16px;
+	cursor: pointer;
+	transition: .3s ease-out;
+}
+
+.news_triple_box:hover {
+	transform: translateX(-5px) translateY(-15px);
+}
+
+/* 画像をぼかす */
+.news_triple_box img{
+	filter: blur(2px);
+	transition-duration: 0.5s;
+}
+
+.news_triple_box img:hover {
+	filter: blur(0);
+	transition-duration: 0.5s;
+}
+
+
+/* 「NEWS」を上下に2分割した内の下の箱の3要素の日付 */
+.news_bottom_box_text {
+	padding: 32px 0px 24px;
+}
+
+/* 「MORE」ボタン配置 */
+.more {
+	margin: 56px 0px 48px;
+	display: flex;
+	justify-content: center;
+}
+
+/* 「MORE」ボタン詳細 */
+#more {
+	width: 300px;
+	height: 60px;
+	border-radius: 100vh;/* 角丸 */
+	background-color: #ffd61a;
+	color: white;
+	font-size: 21px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	transition: .3s ease-out;/* 3秒間で開始時に早く、終了時にゆっくり変化させる */
+}
+
+/* 「MORE」ボタンクリック時 */
+#more:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+	transform: translateY(-4px);/* 上（Y）方向に4px動かす */
+}
+
+/* 「ACCESS」セクション全体 */
+.access {
+	margin-top: -16px;
+	padding-top: 16px;
+}
+
+.access_box {
+	padding: 64px 0px 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fafafa;
+}
+
+/* フォントサイズ設定 */
+.fs_24 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 24px;
+	color: #811414;
+	background-color: #cfbcbc;
+}
+
+/* マージン設定 */
+.margin_fit {
+	line-height: 1;
+	margin: 24px 0px 64px;
+}
+
+/* グーグルマップとテキストの箱 */
+.access_map_text {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* グーグルマップの箱 */
+.access_map {
+	margin: 0px 40px;
+	width: 50%;
+	box-shadow:3px 3px 25px 0px #777777;
+	border-radius: 10px;/* 影の角を丸くする */
+}
+
+/* グーグルmap */
+iframe {
+	width: 100%;
+}
+
+/* 「ACCESS」のテキスト */
+.access_text {
+	width: 50%;
+	display: flex;
+}
+
+/* テキストタイトルの箱 */
+.access_tittle_box {
+	padding-left: 10%;
+	width: auto;
+}
+
+/* 本文の箱 */
+.access_main_text_box {
+	padding: 0px 48px;
+}
+
+/* 行間調整 */
+.access_text p {
+	padding-bottom: 24px;
+}
+
+/* 「CONTACT」セクション全体	 */
+.contact {
+	margin-top: -12px;
+	padding-top: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact_tittle {
+	margin-top: 68px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 24px;
+	color: #811414;
+	background-color: #cfbcbc;
+}
+
+/* フォームの背景つける */
+.form {
+	padding: 30px 0px 70px;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fafafa;
+	box-shadow: 1px 1px 20px -15px;
+}
+
+
+/* 入力フォーム */
+.form_tittle {
+	padding-bottom: 10px;
+	width: 650px;
+	text-align: center;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+/* フォーム全体 */
+#form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 名前（カナ）のlabel */
+.form_name label {
+	margin-right: 200px;
+}
+
+/* 名前（カナ）のinput */
+.form_name input {
+	margin: 12px 0px;
+	width: 328px;
+	height: 36px;
+	border: 2px #bfbfbf solid;
+	border-radius: 5px;
+	background-color: white;
+}
+
+/* メールアドレスのlabel */
+.form_email label {
+	margin-right: 120px;
+}
+
+/* メールアドレスのinput */
+.form_email input {
+	margin: 12px 0px;
+	width: 328px;
+	height: 36px;
+	border: 2px #bfbfbf solid;
+	border-radius: 5px;
+	background-color: white;
+}
+
+/* 「志望動機」全体 */
+.form_motivation {
+	display: flex;
+	margin-top: 28px;
+}
+
+/* 「志望動機」の文字 */
+#form_motivation {
+	margin-right: 176px;
+	margin-left: 105px;
+}
+
+/* 「志望動機」テキスト */
+#form_checkbox p {
+	margin-left: 40px;
+	margin-bottom: 24px;
+	cursor: pointer;
+}
+
+/* チェックボックスとテキスト */
+.form_checkbox_text {
+	display: flex;
+}
+
+/* チェックボックス */
+input.form_checkbox[type="checkbox"] {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 2px solid #cac6c2;
+	background: #cac6c2;
+	cursor: pointer;
+	appearance: none;
+}
+
+input.form_checkbox[type="checkbox"]:checked::before {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	content: '';
+	display: block;
+	border-radius: 5px;
+	border: 2px #ffd61a solid;
+	left: -2px;
+	margin-top: -2px;
+	background: #ffd61a;
+}
+
+input.form_checkbox[type=checkbox]:checked::after {
+	position: absolute;
+	width: 9px;
+	border-bottom: 4px solid #811414;
+	height: 16px;
+	border-right: 4px solid #811414;
+	border-radius: 4px;
+	content: '';
+	display: block;
+	left: 6px;
+	transform: rotate(45deg);
+}
+
+/* 「詳細」全体 */
+.form_text {
+	padding: 8px 0px 40px;
+	display: flex;
+}
+
+/* 「詳細」のlabel */
+.form_text label {
+	margin-right: 200px;
+}
+
+/* 「詳細」のtextarea */
+.form_text textarea {
+	padding: 10px;
+	border: 2px #bfbfbf solid;
+	border-radius: 5px;
+	width: 328px;
+	height: 108px;
+	line-height: 1.25;
+	background-color: white;
+}
+
+/* 「CONTACT」ボタンの箱 */
+.form_button {
+	display: flex;
+}
+
+/* 送信ボタン */
+#form_send_button {
+	margin: 0px 35px;
+	width: 240px;
+	height: 60px;
+	font-size: 19px;
+	color: #811414;
+	border: 1px #ffd61a solid;
+	border-radius: 15px;
+	background-color: #ffd61a;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	transition: .2s ease-out;/* 3秒間で開始時に早く、終了時にゆっくり変化させる */
+	cursor: pointer;
+}
+
+/* カーソルを合わせた時 */
+#form_send_button:hover {
+	font-weight: bold;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px);/* 上（Y）方向に4px動かす */
+	/* color: black; */
+	text-shadow: 2px 2px 0px #ffd61a;
+	border-color: #811414;
+	background-image: url(../img/send-button.png);
+}
+
+/* リセットボタン */
+#form_reset_button {
+	margin: 0px 35px;
+	width: 240px;
+	height: 60px;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	border: 1px #c7c5c5 solid;
+	background-color: #c7c5c5;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	transition: .3s ease-out;/* 3秒間で開始時に早く、終了時にゆっくり変化させる */
+	cursor: pointer;
+}
+
+/* カーソルを合わせた時 */
+#form_reset_button:hover {
+	font-weight: bold;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+	transform: translateY(-1px);/* 上（Y）方向に4px動かす */
+}
+
+/* 「トップへ戻る」ボタンの箱 */
+.to_top_button_box {
+	display: flex;
+	justify-content: end;
+}
+
+/* 「トップへ戻る」ボタン */
+.to_top_button {
+	margin: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 120px;
+	height: 120px;
+	border: 1px ;
+	border-radius: 70px;
+	background-image: radial-gradient(circle, rgba(245, 231, 22, 1) 6%, rgba(233, 180, 47, 1) 80%);
+	cursor: pointer;
+	color: #811414;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 1.25;
+	box-shadow: 0 6px 24px -6px rgba(0, 0, 0, .2);
+	transition: .2s ease-out;
+}
+
+.to_top_button:hover {
+	box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.35);
+	transform: translate(-1%, -3%);
+}
+
+/* フッター */
+.footer {
+	background-color: #811414 ;
+	line-height: 50px;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
